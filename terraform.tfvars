@@ -1,5 +1,0 @@
-crawler_name                 = "ect-sample-crawler"
-partitioner                  = "year=2021"
-tableName                    = "product"
-data_destination_bucket_name = "ect-sample-data-destination-bucket"
-data_source_bucket_name      = "ect-sample-data-source-bucket"

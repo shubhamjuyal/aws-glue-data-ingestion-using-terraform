@@ -17,3 +17,11 @@ variable "data_destination_bucket_name" {
 variable "crawler_name" {
   type = string
 }
+
+variable "csv_name" {
+  type = string
+}
+
+variable "csv_file_path" {
+  type = string
+}

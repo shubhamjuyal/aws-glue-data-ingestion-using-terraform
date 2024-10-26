@@ -21,11 +21,11 @@ resource "aws_s3_object" "upload_csv" {
   acl    = "private"
 }
 
-# resource "aws_s3_object" "temp_folder" {
-#   bucket = aws_s3_bucket.data_source_bucket.id
-#   key    = "/temp/"
-# }
-# resource "aws_s3_object" "scripts_folder" {
-#   bucket = aws_s3_bucket.data_source_bucket.id
-#   key    = "/scripts/"
-# }
+resource "aws_s3_object" "temp_folder" {
+  bucket = aws_s3_bucket.data_source_bucket.id
+  key    = "/temp/"
+}
+resource "aws_s3_object" "scripts_folder" {
+  bucket = aws_s3_bucket.data_source_bucket.id
+  key    = "/scripts/"
+}

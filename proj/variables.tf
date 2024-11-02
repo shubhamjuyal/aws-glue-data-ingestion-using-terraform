@@ -25,3 +25,7 @@ variable "csv_name" {
 variable "csv_file_path" {
   type = string
 }
+
+variable "glue_database_name" {
+  type = string
+}

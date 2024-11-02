@@ -1,9 +1,3 @@
-variable "data_source_bucket_name" {}
-variable "tableName" {}
-variable "partitioner" {}
-variable "csv_file_path" {}
-variable "csv_name" {}
-
 resource "aws_s3_bucket" "data_source_bucket" {
   bucket = var.data_source_bucket_name
 }
@@ -28,4 +22,13 @@ resource "aws_s3_object" "temp_folder" {
 resource "aws_s3_object" "scripts_folder" {
   bucket = aws_s3_bucket.data_source_bucket.id
   key    = "/scripts/"
+}
+
+resource "aws_s3_bucket_public_access_block" "csv_data_bucket" {
+  bucket = aws_s3_bucket.data_source_bucket.id
+
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
 }

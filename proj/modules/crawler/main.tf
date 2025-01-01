@@ -13,6 +13,4 @@ resource "aws_glue_crawler" "csv_crawler" {
   })
 
   # schedule = "cron(0 12 * * ? *)"  # Daily at noon UTC
-
-  depends_on = [var.glue_role_policy_attach]
 }

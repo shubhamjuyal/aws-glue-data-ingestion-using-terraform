@@ -23,5 +23,4 @@ module "crawler" {
   partitioner             = var.partitioner
   glue_database_name      = var.glue_database_name
   glue_role_arn           = module.iam.glue_role_arn
-  glue_role_policy_attach = module.iam.glue_role_policy_attach
 }

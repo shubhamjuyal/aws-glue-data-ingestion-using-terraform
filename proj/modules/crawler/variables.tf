@@ -6,6 +6,3 @@ variable "glue_role_arn" {
   description = "The ARN of the IAM role to be used by the Glue crawler"
   type        = string
 }
-variable "glue_role_policy_attach" {
-
-}

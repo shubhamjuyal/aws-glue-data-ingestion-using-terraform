@@ -22,5 +22,5 @@ module "crawler" {
   tableName               = var.tableName
   partitioner             = var.partitioner
   glue_database_name      = var.glue_database_name
-  glue_role_arn           = module.iam.glue_role_arn
+  crawler_role_arn        = module.iam.crawler_role_arn
 }
